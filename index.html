@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kari 💕</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- PANTALLA 1 -->
+  <div class="screen active" id="screen1">
+    <div class="card">
+      <h1>Kari 💕</h1>
+      <button onclick="goTo(2)">Presióname</button>
+    </div>
+  </div>
+
+  <!-- PANTALLA 2 -->
+  <div class="screen" id="screen2">
+    <div class="card quotes list">
+      <div class="quote">Desde que llegaste a mi vida, todo es más bonito contigo.</div>
+      <div class="quote">Me haces sentir en casa y no imagino mis días sin ti.</div>
+      <div class="quote">Contigo entendí que el amor también se siente en paz.</div>
+      <div class="quote">Me haces bien, y eso vale más que cualquier cosa.</div>
+      <div class="quote">No es perfecto, pero es real, y contigo se siente bonito.</div>
+      <div class="quote">Eres de las cosas más bonitas que me han pasado, y me encanta caminar esto contigo.</div>
+    </div>
+
+    <button class="next-btn" onclick="goTo(3)">Presióname</button>
+  </div>
+
+  <!-- PANTALLA 3 -->
+  <div class="screen" id="screen3">
+    <div class="card">
+      <h2>¿Quieres ser mi Valentín? 💘</h2>
+      <div class="buttons">
+        <button class="yes" onclick="yes()">Sí 💖</button>
+        <button class="no" id="noBtn">No 💔</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANTALLA 4 -->
+  <div class="screen" id="screen4">
+    <div class="card">
+      <h2>Sabía que dirías que sí 🥹</h2>
+      <p class="final">Te amo mucho gotita ❤️</p>
+    </div>
+  </div>
+
+  <audio id="song" src="music/ojos_miel.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

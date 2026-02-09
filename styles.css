@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #b85cff, #ff8ec7);
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .screen {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .screen.active {
+    display: flex;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    width: 85%;
+    max-width: 360px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.2);
+  }
+  
+  h1, h2 {
+    color: #ff4f9a;
+  }
+  
+  button {
+    background: #ff4f9a;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+  
+  .no {
+    background: #ccc;
+    color: #444;
+  }
+  
+  /* FRASES COMO LISTA */
+  .quotes.list {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .quote {
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #555;
+    box-shadow: 0 6px 15px rgba(0,0,0,.15);
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  
+  .quote.show {
+    animation: appear 0.5s ease forwards;
+  }
+  
+  @keyframes appear {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .next-btn {
+    position: fixed;
+    bottom: 30px;
+  }
+  
+  /* CORAZONES FLOTANDO */
+  .heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 18px;
+    animation: floatUp 4s linear forwards;
+    pointer-events: none;
+  }
+  
+  @keyframes floatUp {
+    to {
+      transform: translateY(-110vh);
+      opacity: 0;
+    }
+  }
+  
+  /* CORAZONES CAYENDO FINAL */
+  .falling-heart {
+    position: fixed;
+    top: -20px;
+    font-size: 22px;
+    animation: fall 4s linear forwards;
+    pointer-events: none;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translateY(110vh);
+      opacity: 0;
+    }
+  }
+  
+  .final {
+    font-size: 18px;
+    color: #ff4f9a;
+  }
